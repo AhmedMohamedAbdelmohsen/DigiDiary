@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/top_view"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:alpha="0.7"
+        android:background="@color/lightGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_calendar"
+        android:layout_width="32dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/ic_diary_svg"
+        app:layout_constraintBottom_toBottomOf="@id/top_view"
+        app:layout_constraintStart_toStartOf="@id/top_view"
+        app:layout_constraintTop_toTopOf="@id/top_view" />
+
+    <TextView
+        android:id="@+id/tv_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/_30"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_calendar"
+        app:layout_constraintStart_toEndOf="@id/iv_calendar"
+        app:layout_constraintTop_toTopOf="@id/iv_calendar" />
+
+    <TextView
+        android:id="@+id/tv_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/august"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/tv_day"
+        app:layout_constraintTop_toTopOf="@id/tv_day" />
+
+    <TextView
+        android:id="@+id/tv_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/_2020"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_day"
+        app:layout_constraintStart_toEndOf="@id/tv_day"
+        app:layout_constraintTop_toBottomOf="@id/tv_month" />
+
+    <ImageView
+        android:id="@+id/iv_arrow"
+        android:layout_width="48dp"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_right_arrow"
+        app:layout_constraintBottom_toBottomOf="@id/top_view"
+        app:layout_constraintEnd_toEndOf="@id/top_view"
+        app:layout_constraintTop_toTopOf="@id/top_view" />
+
+
+    <ImageView
+        android:id="@+id/iv_heart"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_heart"
+        app:layout_constraintBottom_toBottomOf="@id/iv_arrow"
+        app:layout_constraintEnd_toStartOf="@id/iv_arrow"
+        app:layout_constraintTop_toTopOf="@id/iv_arrow" />
+
+    <ImageView
+        android:id="@+id/iv_diary_image"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/diary"
+        app:layout_constraintEnd_toEndOf="@id/top_view"
+        app:layout_constraintStart_toStartOf="@id/top_view"
+        app:layout_constraintTop_toBottomOf="@id/top_view" />
+
+    <View
+        android:id="@+id/bottom_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/lightGrey"
+        app:layout_constraintBottom_toBottomOf="@id/tv_today_description"
+        app:layout_constraintEnd_toEndOf="@id/iv_diary_image"
+        app:layout_constraintStart_toStartOf="@id/iv_diary_image"
+        app:layout_constraintTop_toBottomOf="@id/iv_diary_image" />
+
+    <TextView
+        android:id="@+id/tv_today_is"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/today_is"
+        app:layout_constraintStart_toStartOf="@id/bottom_view"
+        app:layout_constraintTop_toTopOf="@id/bottom_view" />
+
+    <TextView
+        android:id="@+id/tv_today_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/awesome"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_today_is"
+        app:layout_constraintStart_toEndOf="@id/tv_today_is" />
+
+    <TextView
+        android:id="@+id/tv_today_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/dummy_text"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_view"
+        app:layout_constraintEnd_toEndOf="@id/bottom_view"
+        app:layout_constraintStart_toStartOf="@id/bottom_view"
+        app:layout_constraintTop_toBottomOf="@id/tv_today_is" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
